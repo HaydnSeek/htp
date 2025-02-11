@@ -5,11 +5,11 @@ _a microframework that dynamically replaces placeholders ({{var}}) in your HTML 
 ## Installing
 
 Add the following snippet inside your HTML:
-```
+```html
 <iframe hidden name=htp onload="setTimeout(()=>document.body.innerHTML=document.body.innerHTML.replace(/\{\{(.*?)\}\}/g, (_,k)=>new URL(location).searchParams.get(k)||''))"></iframe>
 ```
 Use placeholders in your HTML:
-```
+```html
 <h1>Welcome, {{name}}!</h1>
 <p>Your favorite color is {{color}}.</p>
 ```
